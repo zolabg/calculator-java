@@ -1,0 +1,33 @@
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class CalculatorUnitTest {
+
+    
+    public void testCalculateBasicOperations() {
+       
+        Calculator calculator = new Calculator();
+        String expression = "4+5";
+        
+       
+        String result = calculator.Run(expression);
+        
+        
+        assertEquals("9", result);
+    }
+
+   
+    public void testCalculateWithPriority() {
+        
+        Calculator calculator = new Calculator();
+        String expression = "10+5*4+3";
+        
+        
+        String result = calculator.Run(expression);
+        
+        
+        assertEquals("33", result);
+    }
+
+   
+}
