@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class CalculatorBlackBoxTest {
+
+    
+    public void testBasicOperations() {
+        Calculator calculator = new Calculator();
+        String result = calculator.Run("2+3");
+        assertEquals("5", result);
+    }
+
+   
+    public void testOperatorPrecedence() {
+        Calculator calculator = new Calculator();
+        String result = calculator.Run("2+3*4");
+        assertEquals("14", result);
+    }
+
+    
+    public void testParentheses() {
+        Calculator calculator = new Calculator();
+        String result = calculator.Run("(3+4)*2");
+        assertEquals("14", result);
+    }
+
+    
+}
